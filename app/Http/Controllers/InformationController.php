@@ -75,7 +75,7 @@ class InformationController extends Controller
         $info->occupation = $request->input('occupation');
         $info->email = $request->input('email');
         $info->phone = $request->input('phone');
-        $info->image=$request->file('image')->store('images');
+        $info->image=$request->file('image')->store('images', 'images');
         $info->aboutMeDescription = $request->input('aboutMeDescription');
         $info->contactMeDescription = $request->input('contactMeDescription');
         $info->save();
